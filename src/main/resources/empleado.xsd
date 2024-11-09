@@ -1,0 +1,28 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://parameta.com/empleado"
+           xmlns:tns="http://parameta.com/empleado"
+           elementFormDefault="qualified">
+
+    <xs:element name="GuardarEmpleadoRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombres" type="xs:string"/>
+                <xs:element name="apellidos" type="xs:string"/>
+                <xs:element name="tipoDocumento" type="xs:string"/>
+                <xs:element name="numeroDocumento" type="xs:string"/>
+                <xs:element name="fechaNacimiento" type="xs:date"/>
+                <xs:element name="fechaVinculacion" type="xs:date"/>
+                <xs:element name="cargo" type="xs:string"/>
+                <xs:element name="salario" type="xs:double"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="GuardarEmpleadoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="resultado" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
